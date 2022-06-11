@@ -53,6 +53,12 @@ public class SavingsCalculatorApplication extends Application {
         //the first Borderpane contains monthly savings text, slider, and text
         Label monthly = new Label("Monthly savings");
         Slider slider1 = new Slider(25, 250, 25);
+        slider1.setMajorTickUnit(25);
+        slider1.setMinorTickCount(4);
+        slider1.setSnapToTicks(false);
+        slider1.setShowTickMarks(true);
+        slider1.setShowTickLabels(true);
+        
         Label slider1Label = new Label("" + slider1.getValue());
 
         //adding functionality to the slider
@@ -78,6 +84,11 @@ public class SavingsCalculatorApplication extends Application {
         //the second borderpane contains yearly interest text, slider, text
         Label yearly = new Label("Yearly interest rate");
         Slider slider2 = new Slider(0, 10, 0);
+        slider2.setMajorTickUnit(10);
+        slider2.setMinorTickCount(0);
+        slider2.setSnapToTicks(false);
+        slider2.setShowTickMarks(true);
+        slider2.setShowTickLabels(true);
         Label slider2Label = new Label("" + slider2.getValue());
 
         //adding functionality to the slider
